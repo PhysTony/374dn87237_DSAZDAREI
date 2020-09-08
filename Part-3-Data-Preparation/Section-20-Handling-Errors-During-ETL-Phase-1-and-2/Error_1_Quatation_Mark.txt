@@ -1,0 +1,9 @@
+El error del cualificador ("Qualifier") ocurre cuando queremos establecer
+una conexión a nuestra fuente de datos y en "General", dentro de la ventana
+de "Flat File Connection Manager Editor", dejamo "<none>" en lugar de " en
+la opción de "Text qualifier". Cuando vayamos a "Columns" veremos que colum-
+nas como "Feedback" tiene su texto embedido en otras columnas y que toda la
+oración, a pesar de estar esparcida en varias oclumnas como se muestra en la
+imagen "Error_1_Quatation_Mark", empeiza y termina con " y que separado el 
+texto por comas. Esto pasa porque al no especificar que todo un texto o string
+estará entre comillas ", nos lo separa erróneamente por comas.

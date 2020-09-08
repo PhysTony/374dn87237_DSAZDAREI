@@ -1,0 +1,22 @@
+En esta parte analizaremos dos filas, 81 y 96 (del archivo en "Preparation Data"), que 
+contienen errores específicos y veremos cómo resolverlos. Para esto, debido al fallo de
+la data en la carpeta "Uploading Data", copiaremos el archivo de la data original y lo
+pegaremos, bajo el nombre "FakeNames_original.csv", en la carpeta de "Preparation Data"
+- 82: La oración referente a la columan "Feedback" sólo contiene comillas doble al inicio
+pero no al final de la oración, entonces cuando se lee esa fila, vemos que después de varias
+comas, que se suponen serían campos o entradas vacías, hay unas comillas dobles y hasta ahí
+toma todos los datos como si fueran la entrada para la columan "Feedback", podemos solucio-
+nar este error quitando la comilla doble que se haya hasta el final y colocar una al final
+de la oración que tendría que pertenecer a "Feedback" pero no la cambiaremos puesto que no
+conocemos la data faltante.
+Notemos que al SSMS relleno el resto de columnas de manera vacía a pesar de no haber comas 
+en el archivo csv.
+Wrong: "Nothing to complain about, will recommend to my friends. Thanks!,186,cb1ada16-900f-4de2-a823-da0f78971668,-33.852719,18.875968,,,,,,,,,,,,,,,,,,,,,,,,,,"
+- 97: Vemos que faltan unas comillas dobles al inicio de la oración en la columna de
+"Feedback", esto es debido a cómo interpretó Excel esa entrada, para solucionarlo, basta
+poner las comillas dobles toda la oración que va dentro de la columna de "Feedback".
+ Wrong: Thank you," great experience!"""
+ Right; "Thank you, great experience!"
+ 
+ Las fotos del error se muestran con su respectivo nombre.
+ Por último, borramos

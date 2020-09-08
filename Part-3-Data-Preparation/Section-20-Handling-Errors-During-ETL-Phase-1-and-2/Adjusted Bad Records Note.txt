@@ -1,0 +1,5 @@
+To correct the four records in "Bad Records", te first three wows only have missing
+quotation marks in the "Feedback" field, even in the third row, that error caused
+an problome in he column refers to credit card number.
+The last row does not have feecback comment but have a single quotation mark ' in
+the Browse field instead fo " before "Mozila" word.

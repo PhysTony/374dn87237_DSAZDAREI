@@ -1,0 +1,22 @@
+Después de excluir las filas 81 y 96 de la data, podemos ver al establecer el "File Flat
+Connection" que en "Columns" ya nos e hallan dichas filas.
+Después, en "Advanced" cambiamos de 50 a 1000 para el "outputColumnWidth". Mientras que
+para la conexión de "OLE DB Destination" ponemos el mismo servidor "DESKTOP-F34MI32\SQLEXPRESS"
+(por esta ocasión a pesar de que tendríamos que usar una base de datos diferente por buenas
+prácticas). Para la nueva tabla le ponemos un título análogo a la secicón 19, 
+"RAW_FakeNames_20200906" y una columna para los índices "[RawNumber] int identity(1,1),".
+Corremos el "Data Flow" donde veremos que ocurre un nuevo error en "Flat File Connection
+Manager", para ver más detalles de este error nos vamos a la última pestaña "Execution
+Results" y en el tercer mensaje de error veremos el siguiente texto:
+
+[Flat File Source [2]] Error: An error occurred while processing file "C:\Users\Usuario\Documents\Github\Data_Science_A_Z_Real_Life_Data_Science\Part-3-Section-20\20200904 FakeNames\3. Uploaded Data\20200904\FakeNames.csv" on data row 31351.
+
+Vamos a la fila 31351 con el notepad++ usando "Ctrl + g" donde notamos que el campo de 
+"Feedback" el comentario guardado exede los "100" caractéres por lo que tenemos que cambiar,
+desde la creación de la tabla, el tamaño admitdo a 5000. Aceptamos todos los cambios también
+en el "Flat File Source".
+Después borraremos con SQL la tabla que se había creado y por último correr otra vex el "Data
+Flow".
+Por último, volvemos a crear la tabla pero con ahora con el cambio en la columna "Feedback" y
+volvemos a corrrer el "Data Flow". Después de para el proceso dando click en los resultados
+en la parte inferior, podemos ir a SSMS para ver la nueva tabla.

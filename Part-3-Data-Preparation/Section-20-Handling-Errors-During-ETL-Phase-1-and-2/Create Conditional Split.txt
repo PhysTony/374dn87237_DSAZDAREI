@@ -1,0 +1,48 @@
+Creemos ahora un "Conditional Split". Primero borremos la conxión que tenía el "Flat File
+Source" y el "OLE DB Destination" dandole click y suprimiendola.
+Por el momento, en el "Data Flow" sólo tenemos el "Flat File Source" y el "OLE DB Destination",
+lo que haremos ahora es aplicar una condición a nuesra fuene de datos para filtrarlos y que
+los datos que cumplan dicho filtro se escriban en un archivo, siendo este el "Flat File
+Destination" y los demás datos que serán los correctos, irán a "OLE DB Destination".
+Para esto:
+- Vamos a "Data Flow" y en la pestaña de "Common" arrastramos a la hoja de trabajo la opción
+"Conditional Split", nótese que las opciones están ordenadas alfabéticamente.
+- Unimos la línea azúl del "Flat File Source" (FFS) son el "Conditional Split" (CS) y damos
+doble click sobre el CS.
+- Para ponerle nombre nos vamos a "Output Name" y les escribimos en el cuadro de texto infe-
+rior "Bad Records" y damos enter.
+- Para crear la condición, arrastramos las funciones que utilizaremos, en este caso, dichas
+funcioens están ubicadas dentro de las carpetas del cuadro superior derecho. 
+En este caso queremos replicar o hacer una condición equivalente a la que hicimos en SSMS
+para filrar los errores causados por los registros de "Feedback". Entonces nos vamos a la
+carpeta "String Function" y buscamos "LEN" para arrastrarla al cuadro de "Condition", a
+la izquierda de "Output Name". Dentro del argumento de la función arrastramos de la carpeta
+"Columns" nuestra columna de interés a aplicar la condición, "Column 46".
+- Buscamos dentro de la carpeta de "Operator" el operador de comparación ">" o "Greater than"
+y lo arrastramos enfrente de nuestra primer función y además escribimos cero. Esto para fil-
+trar todos los elementos que en dicha columna tengan un registro no nulo.
+- Para agregar otra condición con "or" para que se evalue otra también, seguimos el mismo
+proceso en el mismo cuadro de texto de nuestra primer condición y arrastramos dicho operador
+lógico.
+- Replicamos lo mismo para las columnas "Longitude" con la condición "LEN([Longitude]) == 0".
+
+Todas las filas que no cumplan las condiciones irán al "Default Output" (DO) al que llamare-
+mos "Good Records" y le damos "OK".
+
+Ahora conectaremos el CS a un destino "Flat File Destination" (FFD)
+- Nos vamos a la pestaña de "Other Destinations" y arrastramos al espacio del trabajo la
+opción de "Flat File Destination".
+- Conectamos el CS al FFD con la felcha azúl y en la ventana que se nos abrirá, escribiremos
+en "Output" "Bad Records".
+- Conectamos también el CS al "OLE DB Destination" (ODD) con la otra fecha azúl.
+
+Ahora crearemos un archivo llamado "20200906_FakeNames_BadRecords.txt" dentro de una nueva
+carpeta nueva llamada "Authomatically Excluded Results".
+Asi, estableceremos una conexión para el FFD dandole doble click, seleccionamos la opción
+"Delimited", aceptamos. De ahí a "Browse" para seleccionar el nuevo archivo que mencio-
+namos en el inicio del párrafo. Ponemos las comillas dobles " en el "Text Qualifier".
+Por último, verificamos que todas las columnas tengan las mismas especificaciones que la
+del FFS y aceptamos todo. Corremos el "Data Flow". Ahora veremos en el nuevo archivo todas
+las filas que cumplieron las condiciones en la CS.
+
+Antes de correr el "Data Flow" recordemos borrar los registros de la tabla creada por ODD.

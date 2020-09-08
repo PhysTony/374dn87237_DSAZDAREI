@@ -1,0 +1,37 @@
+Notemos que si abrimos la data "FakeNames.csv" en Notepad++ puede que sea ilegible el formato
+estando este dsordenado pero si vamos a "View" y quitamos el "check" de "Word Wrap" ya se puede
+leer el formato. 
+
+Si este archivo lo abrimos en Excel y aunque no hagamos nada y lo guardamos, dependiendo de la
+configuración del sistema, cuando abramos el archivo en notepad++ veremos que nos cambio el
+formato. Para evitar esto, cambiemos la extensión de la data original de "csv" a "txt" 
+- Seleccionar el archivo e ir a la pestaña de "Archivo" y de ahí ahí
+"Opciones". Una vez hecho esto, iremos a la ventana "Ver" y nos a-
+seguramos de no tener seleccionada la opción "Ocultar las extensio-
+nes de archivo para tipos de archivo conocidos".
+- En lugar de abrir Excel y arrastrar el archivo "txt" al libro de trabajo, desde Excel lo abrimos buscando
+con la opción "todos los archivos (*,*)".
+Luego seguimos los siguientes pasos:
+- En la primer ventana emergente "paso 1 de 3" seleccionamos "Delimitados".
+- En "paso 2 de 3" nos aseguramos que sólo tenga check el cuadro de "Coma" y " en "Calificador de
+testo".
+- Por último, en el "paso 3 de 3" sombreamos todas las columnas con "shift" y seleccionamos el formato
+"Texto".
+
+Para indicar el tipo de datos que contiene la columna hacemos los pasos que se muestran a continuacioón:
+- Seleccionar toda la columna, en este caso "Bithday", nos vamos a la pestaña "Datos" y seleccionamos
+"Texto en columnas".
+- Paso 1, ponemos "Delimitado".
+- Paso 2, todos los cuadros sin palomita.
+- Paso 3, ponemos el formato "Fecha" "MDA" (Mes-Día-Año), esto dependiendo del formato original.
+
+Para las fechas, le damos el por último el formato de fecha aaaa-mm-dd como vimos anteriormente.
+
+En el caso de la columa "AmountPaid" sólo cambiamos en el paso 3 a la opción "General" y cuando le demos
+formato elegimos "Number".
+
+Si nos aparece en la columna "Feedback" cuadro con "#" sólo le damos un formato "General" para que nos muestre
+todo el texto.
+
+Finalmente guardamos el archivo como "csv" y cuando lo abramos con notepad++ veremos como se ha arreglado
+el formato de manera adecuada.

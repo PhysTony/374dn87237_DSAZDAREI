@@ -1,0 +1,7 @@
+Cuando se cambie en este problema la fecha al formato
+yyyy-mm-dd
+nos tenemos que asegurar que en "Fecha" la configuración
+regional esté en Inglés(Estados Unidos) para que nos acepte
+ese formato. Si abrimos el archivo en Excel nos volverá a
+cambiar el formato dependiendo de la configuración del 
+idioma de nuestro sistema operativo.

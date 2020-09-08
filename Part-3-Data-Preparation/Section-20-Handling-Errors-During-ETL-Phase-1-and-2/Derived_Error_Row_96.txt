@@ -1,0 +1,6 @@
+En la foto "Derived_Error_Row_96" vemos que está sombreada una fecha con un formato distinto
+al resto de columnas. Este error se debe a que después de que arreglamos el error de la co-
+lumna "Feedback" nunca volvimos a corregir todo el formato puesto que ante de solucionar el
+error no se podía transformar esa fecha puesto que estaba dentro del campo de "Feedback".
+Debido a esto borraremos este registro de la data en "Prepared Data".
+Por lo tanto, este fila también estará en la carpeta de errore excluídos manualmente.
