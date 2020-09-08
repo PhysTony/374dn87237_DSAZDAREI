@@ -1,0 +1,15 @@
+Para importar data a SSMS tomemos en cuenta que esto sólo lo debemos de hacer cuando es-
+temos seguros que la data ya está limpia, es decir, que no tiene errores como los que vi-
+mos en la sección anterior y ya está lista para subirse "Uploading". Se tomarán en cuenta
+los siguiente pasos:
+- En SSMS, en "Databases" damos click derecho en la base de datos donde queramos importar
+la data, en este caso, "DSTraining". Damos click derecho, escogemos "Task" y selecciona-
+mos "Import Data...".
+- En la ventana emergente "Welcome to SQL Server Import and Export Wizard", damos click
+en "NEXT".
+- En "Data Source" escogemos "Flat File Source" y en con el botón "Browse..." buscamos
+nuestro FFS. Ponemos " en el cualificador.
+- Damos un vistazo rápido a las columnas para ver que no haya errores de cualificador y
+en "OutputColumnWidth", seleccionamos todas las columnas, lo cambiamos de 50 a 1000.
+- Damos "NEXT" y en "Destination" escogemos "Microsoft OLE DB Provider for SQL Server" y
+damos "Next" a todo lo que sigue.

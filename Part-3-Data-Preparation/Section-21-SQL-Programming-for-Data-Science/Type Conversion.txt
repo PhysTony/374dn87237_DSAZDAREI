@@ -1,0 +1,7 @@
+Hay dos tipos de conversión de tipos:
+- Implícito: Esto es cuando delcaramos o asignamos el tipo de dato que alamcenarán las
+columnas en la creación de la tabla.
+- Explícito: Esto es cuando convertimos lo datos mediante funciones
+	- CAST([ColumnName] as Data_Type)
+	- CONVER(Data_Type , [Column_Name])
+

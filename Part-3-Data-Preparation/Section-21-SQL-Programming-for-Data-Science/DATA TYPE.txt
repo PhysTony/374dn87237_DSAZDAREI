@@ -1,0 +1,11 @@
+Type           Example
+VARCHAR(n)     'Hello, my name is Antonio'
+INT            25
+FLOAT          1040.53
+DATE           2020-09-07
+DATETIME       2020-09-07 12:10:05
+BIT            1
+MONEY          1040.53
+
+El tipo MONEY no se acostumbra a usar puesto que presenta mucha limitaciones para operar,
+por ello se utiliza FLOAT en lugar de MONEY.
