@@ -1,0 +1,9 @@
+# Comienza el historial 2020-08-31 04:40
+# Registro de las instrucciones de la sesión.  Por favor, tenga en
+# cuenta que probablemente necesitará editar este guion antes
+# de ejecutarlo.
+open \
+  C:\Users\Usuario\Documents\Github\Data_Science_A_Z_Real_Life_Data_Science\Part-2-Modeling\Simpler-Linear-Regression\P12-SalaryData_Simple_Linear_Regression.gdt
+gnuplot  Salary YearsExperience
+# modelo 1
+ols Salary 0 YearsExperience

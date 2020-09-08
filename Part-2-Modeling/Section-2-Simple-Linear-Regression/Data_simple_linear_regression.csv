@@ -1,0 +1,15 @@
+"Modelo 1: MCO, usando las observaciones 1-30",,,,
+Variable dependiente: Salary,,,,
+,,,,
+,coeficiente,Desv. t√≠pica,Estad√≠stico t,valor p
+const,25792.2002,2273.053433,11.34693968,5.51E-12
+YearsExperience,9449.962321,378.7545742,24.95009424,1.14E-20
+,,,,
+Media de la vble. dep.,76003,D.T. de la vble. dep.,27414.42978,
+Suma de cuad. residuos,938128551.7,D.T. de la regresi√≥n,5788.315051,
+R-cuadrado,0.956956664,R-cuadrado corregido,0.955419402,
+"F(1, 28)",622.5072026,Valor p (de F),1.14E-20,
+Log-verosimilitud,-301.4411585,Criterio de Akaike,606.8823169,
+Criterio de Schwarz,609.6847117,Crit. de Hannan-Quinn,607.7788271,
+,,,,
+"Por el valor tan pequeÒo de nuestro p-value, concluÌmos que esta constante y coeficiente son bueno para predecir.",,,,
